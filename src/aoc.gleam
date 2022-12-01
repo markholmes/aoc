@@ -1,5 +1,5 @@
-import gleam/io
+import days/one
 
 pub fn main() {
-  io.println("Hello from aoc!")
+  one.second()
 }
