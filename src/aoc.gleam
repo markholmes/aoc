@@ -1,5 +1,5 @@
-import days/one
+import days/two
 
 pub fn main() {
-  one.second()
+  two.second()
 }
