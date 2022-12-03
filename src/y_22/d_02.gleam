@@ -3,7 +3,7 @@ import gleam/list
 import gleam/string
 import gleam/io
 
-pub fn first() {
+pub fn solve_1() {
   assert Ok(input) = file.read("./input/two.txt")
 
   input
@@ -27,7 +27,7 @@ pub fn first() {
   |> io.debug()
 }
 
-pub fn second() {
+pub fn solve_2() {
   assert Ok(input) = file.read("./input/two.txt")
 
   input

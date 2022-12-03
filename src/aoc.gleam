@@ -1,5 +1,5 @@
-import days/two
+import y_22/d_03
 
 pub fn main() {
-  two.second()
+  d_03.solve_2()
 }

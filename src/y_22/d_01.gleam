@@ -5,7 +5,7 @@ import gleam/list
 import gleam/result
 import gleam/string
 
-pub fn first() {
+pub fn solve_1() {
   assert Ok(input) = file.read("./input/one.txt")
 
   input
@@ -32,7 +32,7 @@ pub fn first() {
   |> io.println()
 }
 
-pub fn second() {
+pub fn solve_2() {
   assert Ok(input) = file.read("./input/one.txt")
 
   input
