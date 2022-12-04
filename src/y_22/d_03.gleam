@@ -1,3 +1,4 @@
+import gleam/bit_string
 import gleam/erlang/file
 import gleam/int
 import gleam/io
@@ -60,59 +61,12 @@ pub fn solve_2() {
 }
 
 fn alphanumeric_conversion(acc, letter) {
-  case letter {
-    "a" -> 1 + acc
-    "b" -> 2 + acc
-    "c" -> 3 + acc
-    "d" -> 4 + acc
-    "e" -> 5 + acc
-    "f" -> 6 + acc
-    "g" -> 7 + acc
-    "h" -> 8 + acc
-    "i" -> 9 + acc
-    "j" -> 10 + acc
-    "k" -> 11 + acc
-    "l" -> 12 + acc
-    "m" -> 13 + acc
-    "n" -> 14 + acc
-    "o" -> 15 + acc
-    "p" -> 16 + acc
-    "q" -> 17 + acc
-    "r" -> 18 + acc
-    "s" -> 19 + acc
-    "t" -> 20 + acc
-    "u" -> 21 + acc
-    "v" -> 22 + acc
-    "w" -> 23 + acc
-    "x" -> 24 + acc
-    "y" -> 25 + acc
-    "z" -> 26 + acc
-    "A" -> 27 + acc
-    "B" -> 28 + acc
-    "C" -> 29 + acc
-    "D" -> 30 + acc
-    "E" -> 31 + acc
-    "F" -> 32 + acc
-    "G" -> 33 + acc
-    "H" -> 34 + acc
-    "I" -> 35 + acc
-    "J" -> 36 + acc
-    "K" -> 37 + acc
-    "L" -> 38 + acc
-    "M" -> 39 + acc
-    "N" -> 40 + acc
-    "O" -> 41 + acc
-    "P" -> 42 + acc
-    "Q" -> 43 + acc
-    "R" -> 44 + acc
-    "S" -> 45 + acc
-    "T" -> 46 + acc
-    "U" -> 47 + acc
-    "V" -> 48 + acc
-    "W" -> 49 + acc
-    "X" -> 50 + acc
-    "Y" -> 51 + acc
-    "Z" -> 52 + acc
-    _ -> acc
+  case bit_string.from_string(letter) {
+    <<a>> ->
+      case a < 97 {
+        True -> a - 38 + acc
+        False -> a - 96 + acc
+      }
+    _ -> 0
   }
 }
