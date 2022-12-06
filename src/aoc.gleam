@@ -1,5 +1,5 @@
-import y_22/d_04
+import y_22/d_06
 
 pub fn main() {
-  d_04.solve_2()
+  d_06.run_2()
 }
