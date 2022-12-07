@@ -9,12 +9,9 @@ import gleam/string
 pub fn run_1() {
   let instructions = parse_instructions()
   let crates = parse_crates()
+
   move_1(instructions, crates)
-  |> list.map(fn(stack) {
-    stack
-    |> list.reverse()
-    |> list.first()
-  })
+  |> list.map(list.last)
   |> result.values()
   |> string.join("")
   |> io.debug()
@@ -23,12 +20,9 @@ pub fn run_1() {
 pub fn run_2() {
   let instructions = parse_instructions()
   let crates = parse_crates()
+
   move_2(instructions, crates)
-  |> list.map(fn(stack) {
-    stack
-    |> list.reverse()
-    |> list.first()
-  })
+  |> list.map(list.last)
   |> result.values()
   |> string.join("")
   |> io.debug()
